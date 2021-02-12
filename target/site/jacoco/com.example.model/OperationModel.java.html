@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OperationModel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculadora</a> &gt; <a href="index.source.html" class="el_package">com.example.model</a> &gt; <span class="el_source">OperationModel.java</span></div><h1>OperationModel.java</h1><pre class="source lang-java linenums">package com.example.model;
+
+public class OperationModel {
+
+    private String operation;
+    private int a;
+    private int b;
+    private int c;
+
+<span class="nc" id="L10">    public OperationModel() {</span>
+<span class="nc" id="L11">    }</span>
+
+<span class="fc" id="L13">    public OperationModel(int c) {</span>
+<span class="fc" id="L14">        this.c = c;</span>
+<span class="fc" id="L15">    }</span>
+
+<span class="nc" id="L17">    public OperationModel(String operation) {</span>
+<span class="nc" id="L18">        this.operation = operation;</span>
+<span class="nc" id="L19">    }</span>
+
+<span class="fc" id="L21">    public OperationModel(int a, int b) {</span>
+<span class="fc" id="L22">        this.a = a;</span>
+<span class="fc" id="L23">        this.b = b;</span>
+<span class="fc" id="L24">    }</span>
+
+
+    public int getA() {
+<span class="fc" id="L28">        return a;</span>
+    }
+
+    public void setA(int a) {
+<span class="fc" id="L32">        this.a = a;</span>
+<span class="fc" id="L33">    }</span>
+
+    public int getB() {
+<span class="fc" id="L36">        return b;</span>
+    }
+
+    public void setB(int b) {
+<span class="fc" id="L40">        this.b = b;</span>
+<span class="fc" id="L41">    }</span>
+
+    public String getOperation() {
+<span class="nc" id="L44">        return operation;</span>
+    }
+
+    public void setOperation(String operation) {
+<span class="nc" id="L48">        this.operation = operation;</span>
+<span class="nc" id="L49">    }</span>
+
+    public int getC() {
+<span class="fc" id="L52">        return c;</span>
+    }
+
+    public void setC(int c) {
+<span class="fc" id="L56">        this.c = c;</span>
+<span class="fc" id="L57">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

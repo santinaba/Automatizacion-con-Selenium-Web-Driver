@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculateSimple.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculadora</a> &gt; <a href="index.source.html" class="el_package">com.example.service</a> &gt; <span class="el_source">CalculateSimple.java</span></div><h1>CalculateSimple.java</h1><pre class="source lang-java linenums">package com.example.service;
+
+import com.example.model.OperationModel;
+import org.springframework.stereotype.Service;
+import java.lang.Math;
+
+@Service
+<span class="fc" id="L8">public class CalculateSimple {</span>
+
+    public int add(OperationModel model){
+<span class="fc" id="L11">        return model.getA() + model.getB();</span>
+    }
+
+    public int subtract(OperationModel model){
+<span class="fc" id="L15">        return model.getA() - model.getB();</span>
+    }
+
+    public int multiply(OperationModel model){
+<span class="fc" id="L19">        return model.getA() * model.getB();</span>
+    }
+
+    public double divide(OperationModel model){
+<span class="pc bpc" id="L23" title="1 of 2 branches missed.">        if(model.getA() == 0) return 0;</span>
+<span class="pc bpc" id="L24" title="1 of 2 branches missed.">        if(model.getB() == 0) return 0;</span>
+<span class="fc" id="L25">        return (double) model.getA() / model.getB();</span>
+    }
+
+    public int factorial(OperationModel model) {
+<span class="fc" id="L29">        return factorial(model.getC());</span>
+    }
+
+    private int factorial(int n){
+<span class="fc bfc" id="L33" title="All 2 branches covered.">        return n &lt; 2 ? n : n * factorial(n-1);</span>
+    }
+
+    public int fibonacci(OperationModel model){
+<span class="fc" id="L37">        return fibonacci(model.getC());</span>
+    }
+
+    private int fibonacci(int n){
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">        if(n == 0) return 0;</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        else if(n == 1) return 1;</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        else if(n == 2) return 1;</span>
+<span class="fc" id="L44">        else return fibonacci(n-1) + fibonacci(n-2);</span>
+    }
+
+    public double sqrt(OperationModel model){
+<span class="fc" id="L48">        return Math.sqrt(model.getC());</span>
+    }
+
+    public int power(OperationModel model){
+<span class="fc" id="L52">        return model.getC() * model.getC();</span>
+    }
+
+    public OperationModel clearSimple(OperationModel model){
+<span class="fc" id="L56">        model.setA(0);</span>
+<span class="fc" id="L57">        model.setB(0);</span>
+<span class="fc" id="L58">        return model;</span>
+    }
+
+    public OperationModel clearAdvanced(OperationModel model){
+<span class="fc" id="L62">        model.setC(0);</span>
+<span class="fc" id="L63">        return model;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

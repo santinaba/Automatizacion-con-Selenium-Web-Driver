@@ -1,0 +1,5 @@
+com\example\service\CalculateSimple.class
+com\example\model\OperationModel.class
+com\example\controllers\CalculatorController.class
+.netbeans_automatic_build
+com\example\CalculatorSpringBoot.class

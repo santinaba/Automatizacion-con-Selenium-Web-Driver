@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+calculadora,com.example.model,OperationModel,16,36,0,0,8,16,4,8,4,8
+calculadora,com.example.controllers,CalculatorController,136,0,0,0,26,0,12,0,12,0
+calculadora,com.example,CalculatorSpringBoot,8,0,0,0,3,0,2,0,2,0
+calculadora,com.example.service,CalculateSimple,6,106,3,9,0,21,3,16,0,13

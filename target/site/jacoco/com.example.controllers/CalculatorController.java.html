@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculatorController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculadora</a> &gt; <a href="index.source.html" class="el_package">com.example.controllers</a> &gt; <span class="el_source">CalculatorController.java</span></div><h1>CalculatorController.java</h1><pre class="source lang-java linenums">package com.example.controllers;
+import com.example.service.CalculateSimple;
+import com.example.model.OperationModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+@Controller
+<span class="nc" id="L10">public class CalculatorController {</span>
+<span class="nc" id="L11">    OperationModel operationModel = new OperationModel();</span>
+
+    @Autowired
+    private CalculateSimple calculateSimple;
+
+    @RequestMapping(&quot;/calculadora&quot;)
+    public String getCalculatorPage(Model model){
+<span class="nc" id="L18">        model.addAttribute(&quot;operationModel&quot;,operationModel);</span>
+<span class="nc" id="L19">        return &quot;calculadora&quot;;</span>
+    }
+
+    @RequestMapping(value=&quot;/calculadora&quot;, params=&quot;add&quot;, method = RequestMethod.POST)
+    public String add(@ModelAttribute(&quot;operationModel&quot;)  OperationModel operationModel, Model model ){
+<span class="nc" id="L24">        model.addAttribute(&quot;result&quot;, calculateSimple.add(operationModel));</span>
+<span class="nc" id="L25">        return &quot;calculadora&quot;;</span>
+    }
+
+    @RequestMapping(value=&quot;/calculadora&quot;, params=&quot;subtract&quot;, method = RequestMethod.POST)
+    public String subtract(@ModelAttribute(&quot;operationModel&quot;)  OperationModel operationModel, Model model ){
+<span class="nc" id="L30">        model.addAttribute(&quot;result&quot;, calculateSimple.subtract(operationModel));</span>
+<span class="nc" id="L31">        return &quot;calculadora&quot;;</span>
+    }
+
+    @RequestMapping(value=&quot;/calculadora&quot;, params=&quot;multiply&quot;, method = RequestMethod.POST)
+    public String multiply(@ModelAttribute(&quot;operationModel&quot;)  OperationModel operationModel, Model model ){
+<span class="nc" id="L36">        model.addAttribute(&quot;result&quot;, calculateSimple.multiply(operationModel));</span>
+<span class="nc" id="L37">        return &quot;calculadora&quot;;</span>
+    }
+
+    @RequestMapping(value=&quot;/calculadora&quot;, params=&quot;divide&quot;, method = RequestMethod.POST)
+    public String divide(@ModelAttribute(&quot;operationModel&quot;)  OperationModel operationModel, Model model ){
+<span class="nc" id="L42">        model.addAttribute(&quot;result&quot;, calculateSimple.divide(operationModel));</span>
+<span class="nc" id="L43">        return &quot;calculadora&quot;;</span>
+    }
+
+    @RequestMapping(value=&quot;/calculadora&quot;, params=&quot;fibonacci&quot;, method = RequestMethod.POST)
+    public String fibonacci(@ModelAttribute(&quot;operationModel&quot;)  OperationModel operationModel, Model model ){
+<span class="nc" id="L48">        model.addAttribute(&quot;result&quot;, calculateSimple.fibonacci(operationModel));</span>
+<span class="nc" id="L49">        return &quot;calculadora&quot;;</span>
+    }
+
+    @RequestMapping(value=&quot;/calculadora&quot;, params=&quot;sqrt&quot;, method = RequestMethod.POST)
+    public String sqrt(@ModelAttribute(&quot;operationModel&quot;)  OperationModel operationModel, Model model ){
+<span class="nc" id="L54">        model.addAttribute(&quot;result&quot;, calculateSimple.sqrt(operationModel));</span>
+<span class="nc" id="L55">        return &quot;calculadora&quot;;</span>
+    }
+
+    @RequestMapping(value=&quot;/calculadora&quot;, params=&quot;power&quot;, method = RequestMethod.POST)
+    public String power(@ModelAttribute(&quot;operationModel&quot;)  OperationModel operationModel, Model model ){
+<span class="nc" id="L60">        model.addAttribute(&quot;result&quot;, calculateSimple.power(operationModel));</span>
+<span class="nc" id="L61">        return &quot;calculadora&quot;;</span>
+    }
+
+    @RequestMapping(value=&quot;/calculadora&quot;, params=&quot;factorial&quot;, method = RequestMethod.POST)
+    public String factorial(@ModelAttribute(&quot;operationModel&quot;)  OperationModel operationModel, Model model ){
+<span class="nc" id="L66">        model.addAttribute(&quot;result&quot;, calculateSimple.factorial(operationModel));</span>
+<span class="nc" id="L67">        return &quot;calculadora&quot;;</span>
+    }
+
+    @RequestMapping(value=&quot;/calculadora&quot;, params=&quot;clearSimple&quot;, method = RequestMethod.POST)
+    public String clearSimple(@ModelAttribute(&quot;operationModel&quot;)  OperationModel operationModel, Model model ){
+<span class="nc" id="L72">        model.addAttribute(&quot;operationModel&quot;,  calculateSimple.clearSimple(operationModel));</span>
+<span class="nc" id="L73">        model.addAttribute(&quot;result&quot;, 0);</span>
+<span class="nc" id="L74">        return &quot;calculadora&quot;;</span>
+    }
+
+    @RequestMapping(value=&quot;/calculadora&quot;, params=&quot;clearAdvanced&quot;, method = RequestMethod.POST)
+    public String clearAdvanced(@ModelAttribute(&quot;operationModel&quot;)  OperationModel operationModel, Model model ){
+<span class="nc" id="L79">        model.addAttribute(&quot;operationModel&quot;,  calculateSimple.clearAdvanced(operationModel));</span>
+<span class="nc" id="L80">        model.addAttribute(&quot;result&quot;, 0);</span>
+<span class="nc" id="L81">        return &quot;calculadora&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="65671" started-at="2021-02-12T01:49:41Z" finished-at="2021-02-12T01:50:47Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="65671" started-at="2021-02-12T01:49:41Z" finished-at="2021-02-12T01:50:47Z">
+      <class name="com.example.service.CalculadoraTestSelenium">
+        <test-method status="PASS" signature="testResta()" name="testResta" duration-ms="11756" started-at="2021-02-12T01:49:42Z" finished-at="2021-02-12T01:49:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResta -->
+        <test-method status="PASS" signature="testRaiz()" name="testRaiz" duration-ms="19419" started-at="2021-02-12T01:49:42Z" finished-at="2021-02-12T01:50:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRaiz -->
+        <test-method status="PASS" signature="testSuma()" name="testSuma" duration-ms="25488" started-at="2021-02-12T01:49:42Z" finished-at="2021-02-12T01:50:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSuma -->
+        <test-method status="PASS" signature="testFactorial()" name="testFactorial" duration-ms="33062" started-at="2021-02-12T01:49:42Z" finished-at="2021-02-12T01:50:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFactorial -->
+        <test-method status="PASS" signature="testFibonacci()" name="testFibonacci" duration-ms="41230" started-at="2021-02-12T01:49:42Z" finished-at="2021-02-12T01:50:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFibonacci -->
+        <test-method status="PASS" signature="testDivision()" name="testDivision" duration-ms="58974" started-at="2021-02-12T01:49:42Z" finished-at="2021-02-12T01:50:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDivision -->
+        <test-method status="PASS" signature="testLimpiar()" name="testLimpiar" duration-ms="52781" started-at="2021-02-12T01:49:42Z" finished-at="2021-02-12T01:50:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLimpiar -->
+        <test-method status="PASS" signature="testMultiplicacion()" name="testMultiplicacion" duration-ms="47322" started-at="2021-02-12T01:49:42Z" finished-at="2021-02-12T01:50:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultiplicacion -->
+        <test-method status="PASS" signature="testPotencia()" name="testPotencia" duration-ms="65466" started-at="2021-02-12T01:49:42Z" finished-at="2021-02-12T01:50:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPotencia -->
+      </class> <!-- com.example.service.CalculadoraTestSelenium -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
