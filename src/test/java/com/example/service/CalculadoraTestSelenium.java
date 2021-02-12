@@ -78,16 +78,14 @@ public class CalculadoraTestSelenium {
     }
 
     public String returnResult() {
-        // Retorna la cadena que esta en result
         return driver.findElement(By.xpath(result)).getText();
     }
 
     public void mySleep() {
-        // Indica el tiempo de espera
+        // Tiempo de espera
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -109,11 +107,9 @@ public class CalculadoraTestSelenium {
         x();
         y();
         Suma = elem(By.cssSelector("input[value='+']"));
-
         writeSimple(x, y, "7", "3");
         Suma.click();
         mySleep();
-
         assertTrue(returnResult().contains("Resultado: 10"));
     }
 
@@ -123,11 +119,9 @@ public class CalculadoraTestSelenium {
         x();
         y();
         Resta = elem(By.cssSelector("input[value='-']"));
-
         writeSimple(x, y, "19", "13");
         Resta.click();
         mySleep();
-
         assertTrue(returnResult().contains("Resultado: 6"));
     }
 
@@ -137,11 +131,9 @@ public class CalculadoraTestSelenium {
         x();
         y();
         Multiplicacion = elem(By.cssSelector("input[value='*']"));
-
         writeSimple(x, y, "4", "3");
         Multiplicacion.click();
         mySleep();
-
         assertTrue(returnResult().contains("Resultado: 12"));
     }
 
@@ -151,11 +143,9 @@ public class CalculadoraTestSelenium {
         x();
         y();
         Division = elem(By.cssSelector("input[value='/']"));
-
         writeSimple(x, y, "25", "5");
         Division.click();
         mySleep();
-
         assertTrue(returnResult().contains("Resultado: 5.0"));
     }
 
@@ -165,7 +155,6 @@ public class CalculadoraTestSelenium {
         Limpiar = elem(By.cssSelector("input[value='C']"));
         Limpiar.click();
         mySleep();
-
         assertTrue(returnResult().contains("Resultado: 0"));
     }
 
@@ -177,7 +166,6 @@ public class CalculadoraTestSelenium {
         writeAdvance(z, "9");
         Fibonacci.click();
         mySleep();
-
         assertTrue(returnResult().contains("Resultado: 34"));
     }
 
@@ -189,19 +177,17 @@ public class CalculadoraTestSelenium {
         writeAdvance(z, "7");
         Factorial.click();
         mySleep();
-
         assertTrue(returnResult().contains("Resultado: 5040"));
     }
 
     @Test
     public void testRaiz() {
-        // Raiz Cuadrada
+        // Raiz 
         z();
         Raiz = elem(By.name("sqrt"));
         writeAdvance(z, "100");
         Raiz.click();
         mySleep();
-
         assertTrue(returnResult().contains("Resultado: 10.0"));
     }
 
